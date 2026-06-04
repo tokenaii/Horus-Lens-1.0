@@ -65,6 +65,19 @@ model.generate_image(
 
 print("Saved image to outputs/horus_lens.png")
 ```
+## GGUF Compressed Versions
+
+For users with limited hardware resources or lower VRAM, we provide optimized GGUF compressed versions of Horus Lens 1.0 in a dedicated repository:
+👉 **[tokenaii/Horus-Lens-1.0-GGUF](https://huggingface.co/tokenaii/Horus-Lens-1.0-GGUF)**
+
+Below is a breakdown of the available GGUF versions, their file sizes, and estimated VRAM requirements for inference:
+
+| Model File | File Size (GB) | Estimated VRAM Requirement | Recommended Hardware / Use Case |
+| :--- | :---: | :---: | :--- |
+| **Horus-Lens-1.0-Q3_K_M.gguf** | 4.56 GB | ~5.5 GB | Low VRAM GPUs (e.g., 6 GB cards) |
+| **Horus-Lens-1.0-Q4_K_M.gguf** | 5.07 GB | ~6.0 GB | Standard consumer GPUs / Great balance of speed and quality |
+| **Horus-Lens-1.0-Q6_K.gguf** | 6.10 GB | ~7.0 GB | High fidelity generation with medium-high VRAM |
+| **Horus-Lens-1.0-Q8_0.gguf** | 7.22 GB | ~8.0 GB | Best quality, nearest to the original uncompressed model |
 
 ## About TokenAI & The Horus Family
 **TokenAI** is a non-profit AI startup founded in 2025 by Assem Sabry, located in Alexandria, Egypt. 
