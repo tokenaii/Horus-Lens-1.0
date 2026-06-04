@@ -41,9 +41,30 @@ Below is an example showcasing the model's ability to accurately follow prompt i
 You can download and use Horus Lens 1.0 directly from our Hugging Face repository:
 👉 **[tokenaii/Horus-Lens-1.0](https://huggingface.co/tokenaii/Horus-Lens-1.0)**
 
-You can use Horus Lens 1.0 similarly to the base model using the `diffusers` library or via standard stable-diffusion interfaces.
+### List available Horus models
+```python
+import neuralnode as nn
 
-*(Additional usage instructions and code snippets will be added here)*
+# Print all available Horus models in the registry
+nn.print_model_list()
+```
+
+### Load and generate an image
+```python
+import neuralnode as nn
+
+# Load the Horus Lens 1.0 text-to-image model
+model = nn.HorusLensModel("tokenaii/Horus-Lens-1.0").load()
+
+# Generate and save the image
+model.generate_image(
+    prompt="A detailed cinematic image of an ancient Egyptian AI lab, golden light",
+    output_path="outputs/horus_lens.png",
+    seed=42
+)
+
+print("Saved image to outputs/horus_lens.png")
+```
 
 ## About TokenAI & The Horus Family
 **TokenAI** is a non-profit AI startup founded in 2025 by Assem Sabry, located in Alexandria, Egypt. 
