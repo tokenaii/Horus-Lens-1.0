@@ -41,7 +41,16 @@ Below is an example showcasing the model's ability to accurately follow prompt i
 You can download and use Horus Lens 1.0 directly from our Hugging Face repository:
 👉 **[tokenaii/Horus-Lens-1.0](https://huggingface.co/tokenaii/Horus-Lens-1.0)**
 
-### List available Horus models
+### 1. Install or Upgrade NeuralNode
+```bash
+# Install the framework
+pip install neuralnode
+
+# Optional: Upgrade the framework
+pip install --upgrade neuralnode
+```
+
+### 2. List available Horus models
 ```python
 import neuralnode as nn
 
@@ -49,7 +58,7 @@ import neuralnode as nn
 nn.print_model_list()
 ```
 
-### Load and generate an image
+### 3. Load and generate an image
 ```python
 import neuralnode as nn
 
